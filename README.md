@@ -1,1 +1,25 @@
 # CookLang_Compiler
+
+### EBNF
+```
+RECEITA = { INSTRUCAO } ;
+INSTRUCAO = ( TITULO | INGREDIENTE | ACAO | COMENTARIO ) ;
+TITULO = "#", TEXTO, "\n" ;
+INGREDIENTE = "@", TEXTO, [ " ", QUANTIDADE ], "\n" ;
+ACAO = "%", ( PRE-AQUECER-FORNO | MISTURAR | ADICIONAR | MISTURAR-POR | ASSAR ), "\n" ;
+PRE-AQUECER-FORNO = "PRE-AQUECER-FORNO", "(", NUMERO, ",", NUMERO, ")" ;
+MISTURAR = "MISTURAR", "(", LISTA-INGREDIENTES, ")" ;
+ADICIONAR = "ADICIONAR", "(", LISTA-INGREDIENTES, ")" ;
+MISTURAR-POR = "MISTURAR-POR", "(", LISTA-INGREDIENTES, ",", NUMERO, ")" ;
+ASSAR = "ASSAR", "(", NUMERO, ")" ;
+LISTA-INGREDIENTES = IDENTIFICADOR, { ",", IDENTIFICADOR } ;
+COMENTARIO = "//", TEXTO, "\n" ;
+QUANTIDADE = NUMERO, " ", UNIDADE ;
+IDENTIFICADOR = LETRA, { LETRA | DIGITO | "_" } ;
+NUMERO = DIGITO, { DIGITO } ;
+LETRA = ( "a" | ... | "z" | "A" | ... | "Z" ) ;
+DIGITO = ( "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" ) ;
+TEXTO = { LETRA | DIGITO | " " | "-" | "_" } ;
+UNIDADE = { LETRA } ;
+
+```
