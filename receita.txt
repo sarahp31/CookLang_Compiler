@@ -1,0 +1,6 @@
+# Bolo de Chocolate
+@ farinha 2 xicara
+@ acucar 1 xicara
+
+% PRE-AQUECER-FORNO(250, 15)
+% MISTURAR(farinha, manteiga, acucar)
