@@ -46,8 +46,6 @@ ___________________________________
 
 % PRE-AQUECER-FORNO(250,15)
 % MISTURAR(farinha, manteiga, acucar)
-
-
 ```
 ### Flex e Bison
 ____________________________
