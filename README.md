@@ -1,5 +1,5 @@
 # Cook Language
-________________________________
+
 ### Descrição
 _______________________________
 Linguagem de programação desenvolvida para a disciplina de Lógica da Computação do curso de Engenharia de Computação do Insper. A linguagem foi desenvolvida para para ler e interpretar receitas de culinária como instruções para um robô de cozinha.
