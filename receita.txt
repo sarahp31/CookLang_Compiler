@@ -1,6 +1,16 @@
 # Bolo de Chocolate
 @ farinha 2 xicara
-@ acucar 1 xicara
+@ açúcar 1 xicara
+@ chocolate 3/4 xicara
+@ fermento 1 colher_cha
+@ manteiga 1 xicara
+@ leite 1 xicara
+@ oleo 1/2 xicara
+@ ovo 2 inteiro
 
-% PRE-AQUECER-FORNO(250,15)
-% MISTURAR(farinha, manteiga, acucar)
+
+% PRE-AQUECER-FORNO(250, 15)
+% MISTURAR (farinha, manteiga, açúcar, fermento, chocolate)
+% ADICIONAR( ovo, leite, oleo)
+% MISTURAR-POR(todos, 2)
+% ASSAR(30)
