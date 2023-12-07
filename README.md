@@ -1,15 +1,15 @@
 # Cook Language
-
-### Descrição
 _______________________________
+### Descrição
+
 Linguagem de programação desenvolvida para a disciplina de Lógica da Computação do curso de Engenharia de Computação do Insper. A linguagem foi desenvolvida para para ler e interpretar receitas de culinária como instruções para um robô de cozinha.
 
 ### Desenvolvido por
-___________________________
-Sarah Pimenta
 
+Sarah Pimenta
+___________________________
 ### EBNF:
-_______________________________
+
 para o robô, facilitando a automação do processo de cozimento.
 ```
 RECIPE = HEADER, BREAKLINE, INGREDIENT_LIST, BREAKLINE, STEP_LIST;
@@ -35,9 +35,9 @@ ACTION = PRE_AQUECER_FORNO, LEFT_PARENTHESIS, NUMBER, COMMA, NUMBER, RIGHT_PAREN
 
 INGREDIENTS = WORD, {COMMA, [SPACE], WORD};
 ```
-
+_______________________________
 ### Exemplo de Programa
-___________________________________
+
 ```
 # Bolo de Chocolate
 @ farinha 2 xicara
@@ -47,8 +47,9 @@ ___________________________________
 % PRE-AQUECER-FORNO(250,15)
 % MISTURAR(farinha, manteiga, acucar)
 ```
+___________________________________
 ### Flex e Bison
-____________________________
+
 Para fazer a análise sintática e léxica da linguagem, foram utilizados o Flex e o Bison.
 
 Para compilar o programa, é necessário ter o Flex e o Bison instalados. Assim, para fazer as análises, basta rodar os seguintes comandos no terminal:
@@ -59,5 +60,19 @@ cd Flex_Bison
 flex -l cook.l
 bison -dv parser.y
 gcc -o analyzer parser.tab.c lex.yy.c -lfl
-./analyzer < receita.txt
+./analyzer < ../receita.txt
 ```
+___________________________________
+### Compilador
+
+O compilador da COOK Language utiliza como base o compilador desenvolvido na disciplina para GO. Ele faz todas as etapas de análise (léxica, sintática e semântica) e simula o preparo da receita no terminal.
+
+Para compilar o programa de testes é necessário ter o python instalado. Para rodar, utilize o senguinte comando no terminal:
+
+```
+python compilador.py receita.txt
+```
+___________________________________
+### Apresentação
+
+A apresentação da linguagem está disponível em pdf no arquivo COOKLanguagePresentation.pdf
